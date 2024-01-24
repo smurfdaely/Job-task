@@ -5,6 +5,8 @@ class Task extends CI_Controller
 {
   public function index()
   {
-    $this->load->view('task/index');
+    //$data['barang'] = $this->db->get('barang')->result_array();
+    $data['barang'] = $this->M_barang->SemuaData();
+    $this->load->view('task/index', $data);
   }
 }
